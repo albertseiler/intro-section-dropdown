@@ -16,6 +16,7 @@ body {
     text-align: center;
     width: 100vw;
     height: 100vh;
+    background-color: white;
 }
 
 header {
@@ -98,7 +99,7 @@ footer {
     margin-top: 10em;
 }
 
-nav {
+.nav {
     position: absolute;
     right: 0em;
     top: 0em;
@@ -109,31 +110,28 @@ nav {
     width: 60vw;
     font-family: 'Epilogue', sans-serif;
     align-items: center;
-    /* visibility: hidden; */
+    z-index: 1000;
+    backdrop-filter: blur(8px);
 }
 
-.closed {
-    visibility: hidden;
-}
-
-nav ul {
+.nav ul {
     padding: 0;
     margin-bottom: 1em;
 }
 
-nav ul li {
+.nav ul li {
     display: block;
     justify-content: center;
     align-items: center;
     padding: 0;
 }
 
-nav ul li ul li {
+.nav ul li ul li {
     margin-left: 7.5em;
     text-align: start;
 }
 
-nav li {
+.nav li {
     margin-bottom: 1em;
 }
 
@@ -170,4 +168,9 @@ nav li {
     position: absolute;
     right: 0.5em;
     top: 0.5em;
+}
+
+.blurred {
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
 }
