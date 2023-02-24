@@ -1,0 +1,173 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-grey: #686868;
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Epilogue', sans-serif;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+header {
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    height: 3vh;
+}
+
+header div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero-image {
+    width: 100vw;
+    margin: 0em;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-top: 2em;
+}
+
+.remote-work {
+    margin: 1em;
+}
+
+.remote-work p {
+    color: var(--clr-grey);
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.learn-more {
+    font-family: 'Epilogue', sans-serif;
+    font-size: 1em;
+    background-color: black;
+    color: white;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+    border: none;
+    border-radius: 1em;
+    height: 5vh;
+    width: 40vw;
+}
+
+.logos {
+    display: flex;
+    margin: 0;
+    margin-left: 1em;
+    margin-right: 1em;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+.databiz {
+    height: 1em;
+    width: auto;
+}
+
+.audio {
+    height: 1.5em;
+    width: auto;
+}
+
+.meet {
+    height: 1.25em;
+    width: auto;
+}
+
+.maker {
+    height: 1.5em;
+    width: auto;
+}
+
+footer {
+    margin-top: 10em;
+}
+
+nav {
+    position: absolute;
+    right: 0em;
+    top: 0em;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: 100vh;
+    width: 60vw;
+    font-family: 'Epilogue', sans-serif;
+    align-items: center;
+    /* visibility: hidden; */
+}
+
+.closed {
+    visibility: hidden;
+}
+
+nav ul {
+    padding: 0;
+    margin-bottom: 1em;
+}
+
+nav ul li {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+nav ul li ul li {
+    margin-left: 7.5em;
+    text-align: start;
+}
+
+nav li {
+    margin-bottom: 1em;
+}
+
+.firstnested {
+    margin-top: 1em;
+}
+
+.login {
+    text-decoration: none;
+    color: black;
+}
+
+.register {
+    width: 50vw;
+    height: 5vh;
+    border-radius: 1em;
+    border: 0.1em black solid;
+    background-color: white;
+    margin-top: 1em;
+    font-family: 'Epilogue', sans-serif;
+    font-size: 1em;
+}
+
+.container {
+    margin-left: clamp(-5em, -1.5vw, -9em);
+    margin-top: 4em;
+}
+
+.container a {
+    text-decoration: none;
+}
+
+.closemenu {
+    position: absolute;
+    right: 0.5em;
+    top: 0.5em;
+}
