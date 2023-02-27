@@ -112,11 +112,13 @@ footer {
     align-items: center;
     z-index: 1000;
     backdrop-filter: blur(8px);
+    text-align: start;
 }
 
 .nav ul {
     padding: 0;
     margin-bottom: 1em;
+    margin-left: 0em;
 }
 
 .nav ul li {
@@ -127,7 +129,7 @@ footer {
 }
 
 .nav ul li ul li {
-    margin-left: 7.5em;
+    margin-left: 0.75em;
     text-align: start;
 }
 
@@ -190,6 +192,15 @@ footer {
 .img-desktop {
     display: none;
 }
+
+.arrowopened {
+    display: none;
+}
+
+.arrowclosed {
+    display: inline;
+}
+
 
 @media (min-width: 800px) {
     body {
