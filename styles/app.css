@@ -166,11 +166,33 @@ footer {
 
 .closemenu {
     position: absolute;
-    right: 0.5em;
-    top: 0.5em;
+    right: 1em;
+    top: 1.5em;
 }
 
 .blurred {
     filter: blur(10px);
     -webkit-filter: blur(10px);
+}
+
+.featureslist {
+    display: none;
+}
+
+.companylist {
+    display: none;
+}
+
+.openlist {
+    display: block;
+}
+
+.img-desktop {
+    display: none;
+}
+
+@media (min-width: 800px) {
+    body {
+        display: grid;
+    }
 }
