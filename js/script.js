@@ -13,63 +13,104 @@ let arrowDownFeatures = document.getElementById('arrowdownfeatures')
 let arrowUpFeatures = document.getElementById('arrowupfeatures')
 let arrowDownCompany = document.getElementById('arrowdowncompany')
 let arrowUpCompany = document.getElementById('arrowupcompany')
+let featuresListId = document.getElementById('featureslistid')
+let companyListId = document.getElementById('companylistid')
+let featuresBtnId = document.getElementById('featuresbtnid')
+
+
+
 
 // Add Event listener
 
 
 
-mobileNav.style.visibility = "hidden"
 body.style.backgroundColor = "white"
 arrowDownFeatures.style.display = "inline"
 arrowUpFeatures.style.display = "none"
 arrowDownCompany.style.display = "inline"
 arrowUpCompany.style.display = "none"
 
-
-iconMenu.addEventListener("click", (event) => {
-    if (mobileNav.style.visibility = "hidden") {
-        mobileNav.style.visibility = "visible";
-        main.classList.add("blurred");
-        mobileNav.classList.add("no-overlay");
-        footer.classList.add("blurred");
-        logoAndBurger.classList.add("blurred");
-        body.style.backgroundColor = "grey";
-        console.log("Menu opened");
-    }
-})
-
-xBtn.addEventListener("click", (event) => {
-    if (mobileNav.style.visibility = "visible") {
-        mobileNav.style.visibility = "hidden";
-        main.classList.remove("blurred");
-        footer.classList.remove("blurred");
-        logoAndBurger.classList.remove("blurred");
-        body.style.backgroundColor = "white";
-        featuresList.classList.remove("openlist");
-        companyList.classList.remove("openlist")
-        console.log("Menu closed");
-    }
-})
+if (window.matchMedia('(max-width: 799px)').matches) {
+    iconMenu.addEventListener("click", (event) => {
+        if (mobileNav.style.visibility = "hidden") {
+            mobileNav.style.visibility = "visible";
+            main.classList.add("blurred");
+            mobileNav.classList.add("no-overlay");
+            footer.classList.add("blurred");
+            logoAndBurger.classList.add("blurred");
+            body.style.backgroundColor = "grey";
+            console.log("Menu opened");
+        }
+    })
 
 
-featuresBtn.addEventListener("click", (event) => {
-    featuresList.classList.toggle("openlist");
-    arrowDownFeatures.style.display == "none" ? arrowDownFeatures.style.display = "inline" :
-        arrowDownFeatures.style.display = "none";
-    arrowUpFeatures.style.display == "inline" ? arrowUpFeatures.style.display = "none" :
-        arrowUpFeatures.style.display = "inline";
+    xBtn.addEventListener("click", (event) => {
+        if (mobileNav.style.visibility = "visible") {
+            mobileNav.style.visibility = "hidden";
+            main.classList.remove("blurred");
+            footer.classList.remove("blurred");
+            logoAndBurger.classList.remove("blurred");
+            body.style.backgroundColor = "white";
+            featuresList.classList.remove("openlist");
+            companyList.classList.remove("openlist")
+            console.log("Menu closed");
+        }
+    })
 
-    console.log("Features list toggled");
-})
+
+    featuresBtn.addEventListener("click", (event) => {
+        featuresList.classList.toggle("openlist");
+        arrowDownFeatures.style.display == "none" ? arrowDownFeatures.style.display = "inline" :
+            arrowDownFeatures.style.display = "none";
+        arrowUpFeatures.style.display == "inline" ? arrowUpFeatures.style.display = "none" :
+            arrowUpFeatures.style.display = "inline";
+
+        console.log("Features list toggled");
+    })
 
 
 
-companyBtn.addEventListener("click", (event) => {
-    companyList.classList.toggle("openlist")
-    arrowDownCompany.style.display == "none" ? arrowDownCompany.style.display = "inline" :
-        arrowDownCompany.style.display = "none";
-    arrowUpCompany.style.display == "inline" ? arrowUpCompany.style.display = "none" :
-        arrowUpCompany.style.display = "inline";
+    companyBtn.addEventListener("click", (event) => {
+        companyList.classList.toggle("openlist")
+        arrowDownCompany.style.display == "none" ? arrowDownCompany.style.display = "inline" :
+            arrowDownCompany.style.display = "none";
+        arrowUpCompany.style.display == "inline" ? arrowUpCompany.style.display = "none" :
+            arrowUpCompany.style.display = "inline";
 
-    console.log("Company list toggled")
-})
+        console.log("Company list toggled")
+    })
+
+    console.log("MOBILE WIDTH")
+}
+
+
+
+
+featuresListId.style.display = "none"
+
+
+if (window.matchMedia('(min-width: 800px)').matches) {
+
+    featuresBtn.addEventListener("click", (event) => {
+        featuresList.classList.toggle("openlist");
+        arrowDownFeatures.style.display == "none" ? arrowDownFeatures.style.display = "inline" :
+            arrowDownFeatures.style.display = "none";
+        arrowUpFeatures.style.display == "inline" ? arrowUpFeatures.style.display = "none" :
+            arrowUpFeatures.style.display = "inline";
+
+        console.log("Features list toggled");
+    })
+
+    companyBtn.addEventListener("click", (event) => {
+        companyList.classList.toggle("openlist")
+        arrowDownCompany.style.display == "none" ? arrowDownCompany.style.display = "inline" :
+            arrowDownCompany.style.display = "none";
+        arrowUpCompany.style.display == "inline" ? arrowUpCompany.style.display = "none" :
+            arrowUpCompany.style.display = "inline";
+
+        console.log("Company list toggled")
+    })
+
+
+    console.log("PC WIDTH")
+} 

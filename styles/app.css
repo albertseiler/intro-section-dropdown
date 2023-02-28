@@ -2,34 +2,46 @@
 *::after,
 *::before {
     box-sizing: border-box;
+    /* outline: 1px solid red; */
+    /* overflow: hidden; */
 }
 
 :root {
     --clr-grey: #686868;
-
 }
 
 body {
-    margin: 0;
-    padding: 0;
+    margin: 0em;
+    padding: 0em;
     font-family: 'Epilogue', sans-serif;
     text-align: center;
     width: 100vw;
     height: 100vh;
     background-color: white;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 header {
+    box-sizing: border-box;
+    height: 3vh;
     margin-left: 1em;
     margin-right: 1em;
-    margin-top: 1.5em;
-    margin-bottom: 1.5em;
-    height: 3vh;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    /* overflow: hidden; */
 }
 
 header div {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+}
+
+main {
+    width: 100vw;
+    height: 90vh;
+    /* overflow: hidden; */
 }
 
 .hero-image {
@@ -96,17 +108,19 @@ h1 {
 }
 
 footer {
-    margin-top: 10em;
+    margin-top: 1em;
 }
 
 .nav {
+    visibility: hidden;
     position: absolute;
     right: 0em;
     top: 0em;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     background-color: white;
-    height: 110vh;
+    height: 100vh;
     width: 60vw;
     font-family: 'Epilogue', sans-serif;
     align-items: center;
@@ -168,8 +182,8 @@ footer {
 
 .closemenu {
     position: absolute;
-    right: 1em;
-    top: 1.5em;
+    right: 0;
+    top: 0;
 }
 
 .blurred {
@@ -186,24 +200,300 @@ footer {
 }
 
 .openlist {
-    display: block;
+    display: block !important;
 }
 
 .img-desktop {
     display: none;
 }
 
-.arrowopened {
+.h1-desktop {
     display: none;
 }
 
-.arrowclosed {
-    display: inline;
+a {
+    text-decoration: none;
+    color: black;
 }
-
 
 @media (min-width: 800px) {
     body {
+        height: 100vh;
+        width: 100vw;
+        margin: 0em;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    section {
+        height: 90vh;
+        width: 80vw;
         display: grid;
+        grid-template-columns: 60% 1fr;
+        grid-template-rows: 70% 1fr;
+        gap: 1em;
+        margin-left: 8em;
+        margin-right: -1em;
+    }
+
+    .img-mobile {
+        display: none;
+    }
+
+    .img-desktop {
+        display: block;
+        width: 40vw;
+        height: 80vh;
+    }
+
+    .remote-work {
+        grid-column-start: 1;
+        grid-row-start: 1;
+        text-align: start;
+        margin-top: -2em;
+    }
+
+    .remote-work p {
+        font-size: 1.15em;
+        padding-right: 6em;
+    }
+
+    .h1-desktop {
+        display: block;
+        text-align: start;
+        font-size: 5em;
+        margin-top: 2em;
+    }
+
+    .h1-mobile {
+        display: none;
+
+    }
+
+    .learn-more {
+        margin-top: 1em;
+        width: 10em;
+        font-size: 1.25em;
+    }
+
+    .logos {
+        grid-row: 2 / 3;
+        grid-column: 1 / 1;
+        padding-top: 3em;
+    }
+
+    header {
+        all: revert;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 6vh;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .icon-menu {
+        display: none;
+    }
+
+    .closemenu {
+        display: none;
+    }
+
+    .register {
+        margin: 0;
+        width: 7em;
+        height: 2em;
+        margin-right: 2em;
+        margin-left: clamp(-10em, 1vw, -1em);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .register:hover {
+        cursor: pointer;
+        font-weight: 500;
+    }
+
+    .login {
+        margin: 0;
+        margin-right: 0em;
+        font-size: 1em;
+
+    }
+
+    .login:hover {
+        font-weight: 500;
+    }
+
+    footer {
+        all: revert;
+        margin-top: -1em;
+    }
+
+    .nav {
+        all: revert;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 90vw;
+    }
+
+    .nav ul {
+        all: revert;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .nav li {
+        all: revert;
+    }
+
+    .nav ul li {
+        margin-left: 1.5em;
+        position: relative;
+    }
+
+    .nav ul li ul li {
+        all: revert;
+    }
+
+    .firstnested {
+        all: revert;
+    }
+
+    .featureslist {
+        all: revert;
+        display: block;
+    }
+
+    .container {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .logo {
+        margin: 0;
+        padding: 0;
+        justify-content: flex-start;
+        padding-left: 2em;
+    }
+
+    .login-register {
+        margin-left: 10em;
+    }
+
+
+    #featureslistid {
+        display: none;
+        position: absolute;
+        left: -4em;
+        text-align: start;
+        list-style-type: none;
+        background-color: rgba(194, 186, 178, 0.3);
+        box-shadow: 1px 1px 15px 5px rgba(0, 0, 0, 0.51);
+        height: 8em;
+        width: 9em;
+        border-radius: 1em;
+        padding-top: 0.5em;
+    }
+
+
+
+    .featureslist img {
+        width: 1em;
+        height: 1em;
+        text-align: start;
+        margin-right: 0.25em;
+    }
+
+    #featureslistid li {
+        margin-top: 0.5em;
+        font-size: 1em;
+        text-align: start;
+    }
+
+    #companylistid {
+        padding: 0;
+        display: none;
+        position: absolute;
+        left: -1em;
+        text-align: start;
+        list-style-type: none;
+        background-color: rgba(194, 186, 178, 0.3);
+        box-shadow: 1px 1px 15px 5px rgba(0, 0, 0, 0.51);
+        height: 6em;
+        width: 5em;
+        border-radius: 1em;
+        padding-top: 0.5em;
+        padding-right: 1.5em;
+        padding-left: 1.5em;
+    }
+
+    #companylistid li {
+        margin-top: 0.5em;
+        font-size: 1em;
+        text-align: start;
+    }
+
+    .databiz {
+        height: 1.75em;
+        width: 6em;
+    }
+
+    .audio {
+        height: 1.75em;
+        width: auto;
+    }
+
+    .meet {
+        height: 1.75em;
+        width: auto;
+    }
+
+    .maker {
+        height: 1.75em;
+        width: auto;
+
+    }
+}
+
+@media (min-width: 1440px) {
+    .login {
+        margin-right: -15em;
+
+    }
+
+    .login:hover {
+        font-weight: 500;
+    }
+
+    .databiz {
+        height: 2em;
+        width: auto;
+    }
+
+    .audio {
+        height: 2.5em;
+        width: auto;
+    }
+
+    .meet {
+        height: 2.25em;
+        width: auto;
+    }
+
+    .maker {
+        height: 2.5em;
+        width: auto;
+
     }
 }

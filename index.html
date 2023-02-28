@@ -33,31 +33,40 @@
     </div>
     <nav class="nav">
       <img src="./images/icon-close-menu.svg" alt="" class="closemenu">
-      <ul class="container">
-        <li>
-          <p class="featuresbtn">Features <img src="./images/icon-arrow-down.svg" alt="" id="arrowdownfeatures"> <img
-              src="./images/icon-arrow-up.svg" alt="" id="arrowupfeatures"> </p>
-          <ul class="featureslist">
-            <li class="firstnested"> <a href="#"> <img src="./images/icon-todo.svg" alt=""> Todo List</a></li>
-            <li> <a href="#"> <img src="./images/icon-calendar.svg" alt=""> Calendar</a></li>
-            <li> <a href="#"> <img src="./images/icon-reminders.svg" alt=""> Reminders</a></li>
-            <li> <a href="#"> <img src="./images/icon-planning.svg" alt=""> Planning</a></li>
-          </ul>
-        </li>
-        <li>
-          <p class="companybtn">Company <img src="./images/icon-arrow-down.svg" alt="" id="arrowdowncompany"> <img
-              src="./images/icon-arrow-up.svg" alt="" id="arrowupcompany" </p>
-          <ul class="companylist">
-            <li class="firstnested">History</li>
-            <li>Our Team</li>
-            <li>Blog</li>
-          </ul>
-        </li>
-        <li>Careers</li>
-        <li>About</li>
-      </ul>
+      <div class="container">
+        <ul>
+          <li>
+            <p class="featuresbtn" id="featuresbuttonid"><a href="#">Features</a> <img
+                src="./images/icon-arrow-down.svg" alt="" id="arrowdownfeatures"> <img src="./images/icon-arrow-up.svg"
+                alt="" id="arrowupfeatures"> </p>
+            <ul class="featureslist" id="featureslistid">
+              <li class="firstnested"> <a href="#"> <img src="./images/icon-todo.svg" alt=""> Todo List</a></li>
+              <li> <a href="#"> <img src="./images/icon-calendar.svg" alt=""> Calendar</a></li>
+              <li> <a href="#"> <img src="./images/icon-reminders.svg" alt=""> Reminders</a></li>
+              <li> <a href="#"> <img src="./images/icon-planning.svg" alt=""> Planning</a></li>
+            </ul>
+          </li>
+          <li>
+            <p class="companybtn"><a href="#">Company</a> <img src="./images/icon-arrow-down.svg" alt=""
+                id="arrowdowncompany"> <img src="./images/icon-arrow-up.svg" alt="" id="arrowupcompany" </p>
+            <ul class="companylist" id="companylistid">
+              <li class="firstnested"><a href="#">History</a></li>
+              <li><a href="#">Our Team</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Careers</a>
+          </li>
+          <li>
+            <a href="#">About</a>
+          </li>
+        </ul>
+      </div>
+      <div class="login-register"></div>
       <a href="#" class="login">Login</a>
       <button class="register">Register</button>
+      </div>
     </nav>
   </header>
   <main>
@@ -65,7 +74,8 @@
       <img src="./images/image-hero-mobile.png" alt="" class="hero-image img-mobile">
       <img src="./images/image-hero-desktop.png" alt="" class="hero-image img-desktop">
       <aside class="remote-work">
-        <h1>Make remote work</h1>
+        <h1 class="h1-mobile">Make remote work</h1>
+        <h1 class="h1-desktop">Make <br> remote work</h1>
         <p>
           Get your team in sync, no matter your location. Streamline processes, create team
           rituals, and watch productivity soar.
@@ -81,8 +91,8 @@
     </section>
   </main>
   <footer class="attribution">
-    <p> Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="#">Your Name Here</a>.
+    <p>
+      Coded by <a href="https://www.linkedin.com/in/albert-seiler-94b75724b/">Albert-Alexandru Seiler</a>.
     </p>
   </footer>
   <script src="./js/script.js"></script>
